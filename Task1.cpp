@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+float basic_pay(float hours,float rate) {
+    float b_pay;
+    b_pay = hours * rate;
+    return b_pay;
+}
+
+int main() {
+    float hours,rate,b_pay,net_pay;
+    float tax;
+    string name;
+
+    cout<<"Enter employee name";
+    getline(cin,name);
+
+    cout<<"Enter the hours worked: ";
+    cin>>hours;
+
+    cout<<"Enter the rate: ";
+    cin>>rate;
+
+    b_pay = basic_pay(hours,rate);
+
+    if (b_pay > 50000) {
+        tax = 20.0/100.0 * b_pay;
+        net_pay = b_pay - tax;
+
+        cout<<"Empoyee name is "<<name<<endl;
+        cout<<"The net pay = "<<net_pay<<endl;
+    }
+    else if(b_pay > 20000 || b_pay < 50000) {
+        tax = 10.0/100.0 * b_pay;
+        net_pay = b_pay - tax;
+
+        cout<<"Empoyee name is "<<name<<endl;
+        cout<<"The net pay is"<<net_pay;
+    }
+    else if (b_pay < 2000) {
+
+        cout<<"Empoyee name is "<<name<<endl;
+        cout<<"The net pay is "<<net_pay<<endl;
+    }
+
+    return 0;
+}
