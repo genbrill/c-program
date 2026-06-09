@@ -1,3 +1,7 @@
+//name  :Peter Otieno
+//RegNo :BCS-05-0048/2025
+//Hotel_Management_System_Using_Arrays
+
 #include <iostream>
 using namespace std;
 
